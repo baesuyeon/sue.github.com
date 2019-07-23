@@ -1,0 +1,15 @@
+<h1> <%= @title %> </h1>
+
+<table>
+    <tr>
+        <th>날짜</th>
+        <th>매출</th>
+    </tr>
+    
+    <% @datas.each do |date, revenue| %>
+        <tr> 
+             <td> <%= date %> </a> </td> 
+             <td> <%= revenue %> </td> 
+        </tr>
+    <% end %>
+</table>

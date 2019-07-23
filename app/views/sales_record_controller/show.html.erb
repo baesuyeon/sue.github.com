@@ -1,0 +1,15 @@
+<h1> <%= @date %> </h1>
+
+<table>
+    <tr>
+        <th>강좌명</th>
+        <th>매출</th>
+    </tr>
+    
+    <% @datas.each do |title, revenue| %>
+        <tr> 
+             <td> <%= link_to "#{title}", course_sales_by_date_path(id: title) %> </td>
+             <td> <%= revenue %> </td> 
+        </tr>
+    <% end %>
+</table>

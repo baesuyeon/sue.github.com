@@ -1,0 +1,15 @@
+<h1>날짜별 매출</h1>
+
+<table>
+    <tr>
+        <th>날짜</th>
+        <th>매출</th>
+    </tr>
+    
+    <% @date_revenue.each do |date, revenue| %>
+        <tr> 
+           <td> <%= link_to "#{date}", daily_sales_by_course_path(id: date) %> </td>
+           <td> <%= revenue %> </td> 
+        </tr>
+    <% end %>
+</table>

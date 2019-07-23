@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  key_link: MyString
+  title: MyString
+  total_count: 1
+  created_date: MyString
+
+two:
+  key_link: MyString
+  title: MyString
+  total_count: 1
+  created_date: MyString
