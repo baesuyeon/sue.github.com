@@ -26,5 +26,5 @@ def local(time)
 end
  
 every :day, at: local('11:50 pm') do
-    rake "crawling_sales_collect:crawling_sales_collect"
+    rake "crawling_sales_collect:crawling_sales_collect", :environment => "production"
 end
