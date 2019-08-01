@@ -1,15 +1,41 @@
-<h1>날짜별 매출.</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+      table {
+        width: 100%;
+        border: 1px solid #444444;
+        border-collapse: collapse;
+      }
+      th, td {
+        border: 1px solid #444444;
+        padding: 10px;
+        text-align: center;
+      }
 
-<table>
+      #tr_hover:hover { 
+        background-color:#E6E6E6;
+      }
+
+    </style>
+</head>
+<body>
+
+<h1>날짜별 매출</h1>
+
+<table border = "1">
     <tr>
         <th>날짜</th>
         <th>매출</th>
     </tr>
     
-    <% @date_revenue.each do |date, revenue| %>
-        <tr> 
+    <% @date_revenue.drop(1).each do |date, revenue| %>
+        <tr id = "tr_hover"> 
            <td> <%= link_to "#{date}", daily_sales_by_course_path(id: date) %> </td>
            <td> <%= revenue %> </td> 
         </tr>
     <% end %>
 </table>
+
+</body>
+</html>

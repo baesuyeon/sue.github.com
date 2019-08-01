@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+      table {
+        width: 100%;
+        border: 1px solid #444444;
+        border-collapse: collapse;
+      }
+      th, td {
+        border: 1px solid #444444;
+        padding: 10px;
+        text-align: center;
+      }
+
+      #tr_hover:hover { 
+        background-color:#E6E6E6;
+      }
+
+    </style>
+</head>
+<body>
+
+<h1> '<%=@text%>' 검색 결과 입니다. </h1>
+
+<table border = "1">
+    <tr>
+        <th>강좌명</th>
+        <th>매출</th>
+    </tr>
+    
+    <% @datas.each do |title, revenue| %>
+        <tr id = "tr_hover"> 
+             <td> <%= link_to "#{title}", course_sales_by_date_path(id: title) %> </td>
+             <td> <%= revenue %> </td> 
+        </tr>
+    <% end %>
+</table>
+
+</body>
+</html>
