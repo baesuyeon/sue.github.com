@@ -3,6 +3,7 @@ class SalesRecordControllerController < ApplicationController
     record = SalesRecord.all
     @date_revenue = record.select([:created_date, :revenue]).group('created_date').sum(:revenue)
     @date_revenue = Hash[@date_revenue.sort]
+    @date_revenue = @date_revenue.drop(1)
   end
   
   def show

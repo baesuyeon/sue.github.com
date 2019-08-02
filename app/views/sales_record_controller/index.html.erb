@@ -23,13 +23,15 @@
 
 <h1>날짜별 매출</h1>
 
+<%= line_chart @date_revenue %>
+
 <table border = "1">
     <tr>
         <th>날짜</th>
         <th>매출</th>
     </tr>
     
-    <% @date_revenue.drop(1).each do |date, revenue| %>
+    <% @date_revenue.each do |date, revenue| %>
         <tr id = "tr_hover"> 
            <td> <%= link_to "#{date}", daily_sales_by_course_path(id: date) %> </td>
            <td> <%= revenue %> </td> 
