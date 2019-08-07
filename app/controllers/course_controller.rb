@@ -12,5 +12,6 @@ class CourseController < ApplicationController
       end
     end
     @datas = Hash[@datas.sort]
+    @datas = @datas.drop(1)
   end
 end

@@ -24,8 +24,13 @@
 
 <h1>날짜별 매출</h1>
 
-<%= line_chart @date_revenue %>
+<%= line_chart @chart_data %>
 
+<% @chart_data.each do |date, revenue| %>
+    <%= date %>
+    <%= revenue %> <br>  
+<% end %>
+ 
 <table border = "1">
     <tr>
         <th>날짜</th>
