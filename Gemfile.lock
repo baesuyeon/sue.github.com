@@ -42,7 +42,7 @@ GEM
     bindex (0.8.1)
     builder (3.2.3)
     byebug (11.0.1)
-    chartkick (3.2.1)
+    chartkick (3.4.0)
     chronic (0.10.2)
     codemirror-rails (5.16.0)
       railties (>= 3.0, < 6.0)
